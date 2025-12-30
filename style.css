@@ -206,7 +206,7 @@ hr {
 }
 
 .container .right-content header nav {
-    padding: 19px;
+    padding: 15px;
     background-color: var(--bg3-color);
     border-bottom: 1px solid var(--border-color);
     border-left: 1px solid var(--border-color);
@@ -217,7 +217,6 @@ hr {
 .container .right-content header nav a {
     font-size: 18px;
     margin: auto 25px;
-    padding: auto 20px;
     color: var(--text-color);
     transition: all .3s ease-in-out;
 }
@@ -296,6 +295,7 @@ hr {
     color: var(--text-color);
     font-size: 24px;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 
 .container .right-content .services .boxs .box .content p {
@@ -378,17 +378,6 @@ hr {
     margin-top: 8px;
 }
 
-/* .container .right-content .career .education .boxs .box:first-child::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    height: 183px;
-    width: 1px;
-    margin: auto 21px;
-    background-color: var(--border-color);
-    z-index: 0;
-} */
-
 .container .right-content .career .skills .title {
     display: flex;
     justify-content: left;
@@ -468,10 +457,7 @@ hr {
 
 /* carrer End */
 
-footer {
-    display: none;
-}
-
+/* Responsiver Page Start */
 @media (max-width: 1200px) {
     .container {
         flex-direction: column;
@@ -585,7 +571,7 @@ footer {
         font-size: 17px;
     }
 
-    footer nav a {
+    .container .right-content header nav a {
         font-size: 16px;
         margin: auto 18px;
     }
@@ -595,10 +581,50 @@ footer {
     .container {
         margin: 10px 15px 40px;
     }
+
+    .container .left-content .me {
+        flex-wrap: wrap;
+    }
+
+    .container .right-content .services .boxs .box .content h3 {
+        font-size: 15px;
+    }
 }
 
+@media (max-width: 400px) {
+    .container .right-content header nav a {
+        font-size: 12px;
+        margin: auto 12px;
+    }
 
+    .container .right-content .services .boxs .box .content p {
+        font-size: 10px;
+    }
 
+    .container .right-content .me p {
+        font-size: 14px;
+    }
+
+    .container .left-content {
+        padding: 20px;
+    }
+
+    .container .right-content {
+        padding: 40px 20px;
+    }
+
+    .container .left-content .me h1 {
+        font-size: 14px;
+    }
+
+    .container .left-content .me img {
+        width: 80px;
+    }
+
+    .container .info .box .text h3 {
+        font-size: 16px;
+    }
+}
 
 /* Animations */
 @keyframes moving {
