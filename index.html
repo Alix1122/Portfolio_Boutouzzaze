@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio | Boutouzzaze-Ali</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -68,9 +68,9 @@
             <hr>
 
             <div class="social">
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/with_1li/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/Alix1122" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=61584323038402" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
 
@@ -235,53 +235,50 @@
                     <h1>Portfolio</h1>
                     <hr>
                     <div class="links">
-                        <a href="#" class="filter active">All</a>
-                        <a href="#" class="filter">Web Site</a>
-                        <a href="#" class="filter">Poste Design</a>
+                        <a href="#" class="filter active" data-filter="all">All</a>
+                        <a href="#" class="filter" data-filter="website">Web Site</a>
+                        <a href="#" class="filter" data-filter="design">Poste Design</a>
                     </div>
 
                     <div class="all">
                         <div class="boxs">
-                            <div class="box site">
+                            <div class="box site" data-category="website">
                                 <a href="https://alix1122.github.io/Sushic/" target="_blank">
                                     <div class="img">
                                         <div class="icon">
                                             <i class="fa-solid fa-eye"></i>
                                         </div>
-                                        <img src="./img/site1.png" alt="">
+                                        <img src="./img/site1.png" style="height: 3O0px;" alt="">
                                     </div>
                                     <h3>Sushic</h3>
                                     <p>Web Development</p>
                                 </a>
                             </div>
-                            <div class="box site">
+                            <div class="box site" data-category="website">
                                 <a href="#">
                                     <div class="img">
                                         <div class="icon">
                                             <i class="fa-solid fa-eye"></i>
                                         </div>
-                                        <img src="./img/site2.png" alt="">
+                                        <img src="./img/site2.png" style="height: 3O0px;" alt="">
                                     </div>
                                     <h3>IFT</h3>
                                     <p>Responsive Website</p>
                                 </a>
                             </div>
-                            <div class="box site">
+                            <div class="box site" data-category="website">
                                 <a href="#">
                                     <div class="img">
                                         <div class="icon">
                                             <i class="fa-solid fa-eye"></i>
                                         </div>
-                                        <img src="./img/site3.png" alt="">
+                                        <img src="./img/site3.png" style="height: 3O0px;" alt="">
                                     </div>
                                     <h3>Store</h3>
                                     <p>Web Development</p>
                                 </a>
                             </div>
-                        </div>
-
-                        <div class="boxs">
-                            <div class="box post">
+                            <div class="box" data-category="design">
                                 <div class="img">
                                     <div class="icon">
                                         <i class="fa-solid fa-eye"></i>
@@ -291,7 +288,7 @@
                                 <h3>Sushic</h3>
                                 <p>Poste Social Media</p>
                             </div>
-                            <div class="box post">
+                            <div class="box" data-category="design">
                                 <div class="img">
                                     <div class="icon">
                                         <i class="fa-solid fa-eye"></i>
@@ -301,7 +298,7 @@
                                 <h3>Clothing</h3>
                                 <p>Poste Social Media</p>
                             </div>
-                            <div class="box post">
+                            <div class="box card" data-category="design">
                                 <div class="img">
                                     <div class="icon">
                                         <i class="fa-solid fa-eye"></i>
@@ -311,7 +308,7 @@
                                 <h3>Agency</h3>
                                 <p>Poste Social Media</p>
                             </div>
-                            <div class="box post">
+                            <div class="box card" data-category="design">
                                 <div class="img">
                                     <div class="icon">
                                         <i class="fa-solid fa-eye"></i>
@@ -321,17 +318,7 @@
                                 <h3>Sushic</h3>
                                 <p>Business Card</p>
                             </div>
-                            <div class="box post">
-                                <div class="img">
-                                    <div class="icon">
-                                        <i class="fa-solid fa-eye"></i>
-                                    </div>
-                                    <img src="./img/card1.jpg" alt="">
-                                </div>
-                                <h3>Impact Agency</h3>
-                                <p>Business Card</p>
-                            </div>
-                            <div class="box post">
+                            <div class="box card" data-category="design">
                                 <div class="img">
                                     <div class="icon">
                                         <i class="fa-solid fa-eye"></i>
@@ -341,8 +328,33 @@
                                 <h3>Qatra Cosmetique</h3>
                                 <p>Business Card</p>
                             </div>
+                            <div class="box card" data-category="design">
+                                <div class="img">
+                                    <div class="icon">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </div>
+                                    <img src="./img/card1.jpg" alt="">
+                                </div>
+                                <h3>Impact Agency</h3>
+                                <p>Business Card</p>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section class="contact content-section" id="">
+                <div class="me">
+                    <h1>Contact Us</h1>
+                    <hr>
+                    <form id="sheetmonkeyForm">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="text" name="number" placeholder="Number" required>
+                        <input type="email" name="gmail" placeholder="Address Email" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <textarea name="message" placeholder="Your Message Here..." rows="10" id=""></textarea>
+                        <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                    </form>
                 </div>
             </section>
         </div>

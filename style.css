@@ -69,6 +69,7 @@ body {
     background-color: var(--bg2-color);
     border: 1px solid var(--border-color);
     border-radius: 15px;
+    height: max-content;
     width: 25%;
 }
 
@@ -103,12 +104,12 @@ body {
     font-size: 13px;
     font-weight: 300;
     letter-spacing: 1px;
-    padding: 13px;
+    padding: 5px 13px;
     background-color: var(--bg3-color);
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    margin: auto 40px;
-    width: max-content;
+    margin: auto 60px;
+    /* width: max-content; */
     color: var(--text-color);
     margin-bottom: 10px;
     transition: all .3s ease;
@@ -469,6 +470,7 @@ hr {
 .portfolio .me .links a {
     color: var(--text-color);
     font-size: 20px;
+    transition: all .3s ease-in-out;
 }
 
 .portfolio .me .links a.active,
@@ -477,7 +479,7 @@ hr {
 }
 
 .portfolio .me .all .boxs {
-    margin: 20px 0;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -542,6 +544,232 @@ hr {
 }
 /* portfolio End */
 
+/* Contact Start */
+.contact .me form {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contact .me form input {
+    flex-basis: 47%;
+    padding: 18px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    outline: none;
+    color: var(--text-color);
+    background-color: var(--bg2-color);
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+.contact .me form textarea {
+    resize: none;
+    width: 100%;
+    padding: 18px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    color: var(--text-color);
+    background-color: var(--bg2-color);
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+.contact .me form input:focus,
+.contact .me form textarea:focus {
+    border-color: var(--blue-color);
+    box-shadow: 0 0 20px 4px rgba(74, 247, 247, 0.1);
+}
+
+.contact .me form button {
+    font-size: 17px;
+    padding: 18px 16px;
+    margin: auto;
+    margin-right: 0;
+    background-color: var(--bg2-color);
+    color: var(--text-color);
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    margin-top: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.contact .me form button:hover {
+    border-color: var(--blue-color);
+}
+
+.contact .me form button i {
+    color: var(--text-color);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* Styles pour les champs requis */
+.contact .me form input:required,
+.contact .me form textarea:required {
+    position: relative;
+    padding-right: 50px; /* Espace pour l'icône */
+}
+
+/* Indicateur visuel pour les champs requis */
+.contact .me form input:required::after,
+.contact .me form textarea:required::after {
+    content: "*";
+    color: #ff4757;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Pour textarea, l'astérisque en haut à droite */
+.contact .me form textarea:required::after {
+    top: 20px;
+    right: 20px;
+}
+
+/* États de validation */
+.contact .me form input:valid:not(:placeholder-shown),
+.contact .me form textarea:valid:not(:placeholder-shown) {
+    border-color: #2ed573;
+    background-color: rgba(46, 213, 115, 0.05);
+}
+
+.contact .me form input:invalid:not(:placeholder-shown),
+.contact .me form textarea:invalid:not(:placeholder-shown) {
+    border-color: #ff4757;
+    background-color: rgba(255, 71, 87, 0.05);
+}
+
+/* Focus sur les champs invalides */
+.contact .me form input:invalid:not(:placeholder-shown):focus,
+.contact .me form textarea:invalid:not(:placeholder-shown):focus {
+    box-shadow: 0 0 20px 4px rgba(255, 71, 87, 0.2);
+    border-color: #ff4757;
+}
+
+/* Focus sur les champs valides */
+.contact .me form input:valid:not(:placeholder-shown):focus,
+.contact .me form textarea:valid:not(:placeholder-shown):focus {
+    box-shadow: 0 0 20px 4px rgba(46, 213, 115, 0.2);
+    border-color: #2ed573;
+}
+
+/* Style du bouton selon l'état du formulaire */
+.contact .me form:invalid button {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--bg2-color);
+    border-color: var(--border-color);
+    color: #666;
+}
+
+.contact .me form:valid button {
+    opacity: 1;
+    cursor: pointer;
+    background-color: var(--blue-color);
+    color: white;
+    border-color: var(--blue-color);
+}
+
+/* Animation de shake pour les champs invalides */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.contact .me form input:invalid:not(:placeholder-shown),
+.contact .me form textarea:invalid:not(:placeholder-shown) {
+    animation: shake 0.5s ease;
+}
+
+/* Messages d'erreur personnalisés */
+.contact .me form .error-message {
+    color: #ff4757;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+    padding-left: 15px;
+}
+
+.contact .me form input:invalid:not(:placeholder-shown) ~ .error-message,
+.contact .me form textarea:invalid:not(:placeholder-shown) ~ .error-message {
+    display: block;
+}
+
+/* Groupes de champs */
+.contact .me form .form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+/* Icône de validation */
+.contact .me form input:valid:not(:placeholder-shown) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232ed573'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+.contact .me form input:invalid:not(:placeholder-shown) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff4757'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+}
+
+/* Pour textarea (icône différente) */
+.contact .me form textarea:valid:not(:placeholder-shown) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232ed573'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px top 15px;
+    background-size: 20px;
+}
+
+.contact .me form textarea:invalid:not(:placeholder-shown) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff4757'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px top 15px;
+    background-size: 20px;
+}
+
+/* Transition pour le bouton */
+.contact .me form button {
+    transition: all .3s ease-in-out, background-color .3s ease, color .3s ease, border-color .3s ease;
+}
+
+/* Hover seulement si formulaire valide */
+.contact .me form:valid button:hover {
+    background-color: var(--blue-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 247, 247, 0.3);
+}
+
+/* Effet de pulsation pour le bouton valide */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74, 247, 247, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(74, 247, 247, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 247, 247, 0); }
+}
+
+.contact .me form:valid button {
+    animation: pulse 2s infinite;
+}
+
+
+/* Contact End */
+
 /* Responsiver Page Start */
 @media (max-width: 1200px) {
     .container {
@@ -555,7 +783,7 @@ hr {
 
     .container .right-content {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     .container .left-content .me {
@@ -599,6 +827,10 @@ hr {
         box-shadow: 0 16px 30px hsla(0, 0%, 0%, 0.25);
         backdrop-filter: blur(10px);
         z-index: 10;
+    }
+
+    .portfolio .me .all .boxs .box {
+        flex-basis: 45%;
     }
 }
 
@@ -659,6 +891,10 @@ hr {
     .container .right-content header nav a {
         font-size: 16px;
         margin: auto 18px;
+    }
+
+    .portfolio .me .all .boxs .box {
+        flex-basis: 100%;
     }
 }
 
@@ -721,5 +957,33 @@ hr {
     to {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .contact .me form input:required,
+    .contact .me form textarea:required {
+        padding-right: 40px;
+    }
+    
+    .contact .me form input:required::after,
+    .contact .me form textarea:required::after {
+        right: 10px;
+        font-size: 18px;
+    }
+
+    .contact .me form input {
+        flex-basis: 100%;
+    }
+}
+
+/* Pour désactiver l'animation sur mobile si nécessaire */
+@media (prefers-reduced-motion: reduce) {
+    .contact .me form input,
+    .contact .me form textarea,
+    .contact .me form button {
+        transition: none;
+        animation: none;
     }
 }
