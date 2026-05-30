@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..900&display=swap");
 
 * {
     padding: 0;
@@ -10,7 +10,7 @@
     --bg-color: #111111;
     --bg2-color: #232323;
     --bg3-color: #373737;
-    --blue-color: #6AECE1;
+    --blue-color: #6aece1;
     --text-color: #fcf4d3;
     --gray-color: #a7a5a5;
     --border-color: #4f4f4f;
@@ -43,7 +43,7 @@ li {
 
 body {
     background-color: var(--bg-color);
-    font-family: "Winky Rough", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .content-section.active {
@@ -52,9 +52,8 @@ body {
 
 .content-section {
     display: none;
-    animation: moving .5s ease;
+    animation: moving 0.5s ease;
 }
-
 
 .container {
     margin: 60px 70px;
@@ -86,7 +85,7 @@ body {
     margin: auto;
     margin-bottom: 30px;
     border: 1px solid var(--border-color);
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .left-content .me img:hover {
@@ -109,10 +108,9 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 10px;
     margin: auto 60px;
-    /* width: max-content; */
     color: var(--text-color);
     margin-bottom: 10px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .left-content .me h3:hover {
@@ -147,7 +145,7 @@ hr {
     border: 1px solid var(--border-color);
     z-index: 1;
     margin: 14px 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .info .box .icon:hover {
@@ -182,7 +180,7 @@ hr {
 .container .left-content .social i {
     font-size: 23px;
     color: var(--gray-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .container .left-content .social i:hover {
@@ -219,7 +217,7 @@ hr {
     font-size: 18px;
     margin: auto 25px;
     color: var(--text-color);
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .container .right-content header nav a:hover,
@@ -279,8 +277,7 @@ hr {
     padding: 15px;
     border: 1px solid var(--border-color);
     border-radius: 10px;
-    /* box-shadow: -1px 4px 20px hsla(0, 0%, 100%, 0.438); */
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .right-content .services .boxs .box:hover {
@@ -334,7 +331,7 @@ hr {
     border: 1px solid var(--border-color);
     z-index: 1;
     margin: 14px 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .right-content .career .education .title i:hover {
@@ -401,7 +398,7 @@ hr {
     border: 1px solid var(--border-color);
     z-index: 1;
     margin: 14px 0;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .container .right-content .career .skills .title i:hover {
@@ -450,7 +447,15 @@ hr {
     border-radius: 10px;
 }
 
-.container .right-content .career .skills .box ul .skill-item .skill-progress .progress {
+.container
+    .right-content
+    .career
+    .skills
+    .box
+    ul
+    .skill-item
+    .skill-progress
+    .progress {
     height: 8px;
     background-color: var(--blue-color);
     border-radius: inherit;
@@ -470,7 +475,7 @@ hr {
 .portfolio .me .links a {
     color: var(--text-color);
     font-size: 20px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .portfolio .me .links a.active,
@@ -525,7 +530,7 @@ hr {
     border-radius: 15px;
     z-index: 1;
     display: none;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .portfolio .me .all .boxs .box h3 {
@@ -565,7 +570,7 @@ hr {
     background-color: var(--bg2-color);
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact .me form textarea {
@@ -579,7 +584,7 @@ hr {
     outline: none;
     border: 1px solid var(--border-color);
     border-radius: 15px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 
 .contact .me form input:focus,
@@ -599,7 +604,7 @@ hr {
     border: 1px solid var(--border-color);
     border-radius: 15px;
     margin-top: 15px;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .contact .me form button:hover {
@@ -610,59 +615,6 @@ hr {
     color: var(--text-color);
     font-size: 20px;
     margin-right: 5px;
-}
-
-/* Styles pour les champs requis */
-.contact .me form input:required,
-.contact .me form textarea:required {
-    position: relative;
-    padding-right: 50px; /* Espace pour l'icône */
-}
-
-/* Indicateur visuel pour les champs requis */
-.contact .me form input:required::after,
-.contact .me form textarea:required::after {
-    content: "*";
-    color: #ff4757;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Pour textarea, l'astérisque en haut à droite */
-.contact .me form textarea:required::after {
-    top: 20px;
-    right: 20px;
-}
-
-/* États de validation */
-.contact .me form input:valid:not(:placeholder-shown),
-.contact .me form textarea:valid:not(:placeholder-shown) {
-    border-color: #2ed573;
-    background-color: rgba(46, 213, 115, 0.05);
-}
-
-.contact .me form input:invalid:not(:placeholder-shown),
-.contact .me form textarea:invalid:not(:placeholder-shown) {
-    border-color: #ff4757;
-    background-color: rgba(255, 71, 87, 0.05);
-}
-
-/* Focus sur les champs invalides */
-.contact .me form input:invalid:not(:placeholder-shown):focus,
-.contact .me form textarea:invalid:not(:placeholder-shown):focus {
-    box-shadow: 0 0 20px 4px rgba(255, 71, 87, 0.2);
-    border-color: #ff4757;
-}
-
-/* Focus sur les champs valides */
-.contact .me form input:valid:not(:placeholder-shown):focus,
-.contact .me form textarea:valid:not(:placeholder-shown):focus {
-    box-shadow: 0 0 20px 4px rgba(46, 213, 115, 0.2);
-    border-color: #2ed573;
 }
 
 /* Style du bouton selon l'état du formulaire */
@@ -684,34 +636,28 @@ hr {
 
 /* Animation de shake pour les champs invalides */
 @keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
 }
 
 .contact .me form input:invalid:not(:placeholder-shown),
 .contact .me form textarea:invalid:not(:placeholder-shown) {
     animation: shake 0.5s ease;
-}
-
-/* Messages d'erreur personnalisés */
-.contact .me form .error-message {
-    color: #ff4757;
-    font-size: 14px;
-    margin-top: 5px;
-    display: none;
-    padding-left: 15px;
-}
-
-.contact .me form input:invalid:not(:placeholder-shown) ~ .error-message,
-.contact .me form textarea:invalid:not(:placeholder-shown) ~ .error-message {
-    display: block;
-}
-
-/* Groupes de champs */
-.contact .me form .form-group {
-    position: relative;
-    margin-bottom: 25px;
 }
 
 /* Icône de validation */
@@ -744,29 +690,30 @@ hr {
     background-size: 20px;
 }
 
-/* Transition pour le bouton */
-.contact .me form button {
-    transition: all .3s ease-in-out, background-color .3s ease, color .3s ease, border-color .3s ease;
-}
-
 /* Hover seulement si formulaire valide */
 .contact .me form:valid button:hover {
-    background-color: var(--blue-color-dark);
+    background-color: var(--blue-color);
+    filter: brightness(0.9);
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(74, 247, 247, 0.3);
 }
 
 /* Effet de pulsation pour le bouton valide */
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(74, 247, 247, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(74, 247, 247, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(74, 247, 247, 0); }
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 247, 247, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(74, 247, 247, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 247, 247, 0);
+    }
 }
 
 .contact .me form:valid button {
     animation: pulse 2s infinite;
 }
-
 
 /* Contact End */
 
@@ -947,34 +894,21 @@ hr {
     }
 }
 
+@media (max-width: 768px) {
+    .contact .me form input {
+        flex-basis: 100%;
+    }
+}
+
 /* Animations */
 @keyframes moving {
     from {
         transform: translateX(50px);
         opacity: 0;
     }
-
     to {
         transform: translateX(0);
         opacity: 1;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .contact .me form input:required,
-    .contact .me form textarea:required {
-        padding-right: 40px;
-    }
-    
-    .contact .me form input:required::after,
-    .contact .me form textarea:required::after {
-        right: 10px;
-        font-size: 18px;
-    }
-
-    .contact .me form input {
-        flex-basis: 100%;
     }
 }
 
